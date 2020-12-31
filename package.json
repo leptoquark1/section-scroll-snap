@@ -1,17 +1,22 @@
 {
   "name": "section-scroll-snap",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
-    "build": "postcss src/styles.css -o src/compiled.css",
-    "postbuild": "echo $(awk -f css-comments.awk src/compiled.css) > src/compiled.css",
+    "prebuild": "rimraf ./dist && cpr \"./src/app\" \"./dist\"",
+    "build": "postcss ./src/styles.css -o ./dist/compiled.css",
+    "postbuild": "echo $(awk -f dev-ops/minify-css.awk ./dist/compiled.css) > ./dist/compiled.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Fecke (@leptoquark1)",
   "license": "Apache-2.0",
-  "dev-dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.1.0",
+    "awk": "^1.0.0",
+    "cpr": "^3.0.1",
+    "mkdirp": "^1.0.4",
     "postcss": "^8.2.2",
     "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^2.0.2"
   }
 }
