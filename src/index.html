@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Section Scroll Snap</title>
+    <base href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./compiled.css" type="text/css">
+</head>
+<body class="font-sans h-screen w-screen overflow-hidden">
+
+<header class="block fixed top-0 left-0 right-0 z-50">
+    <div class="h-14">
+        <div class="flex h-full w-full justify-between items-center px-3">
+
+            <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path fill="transparent" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                <path fill="transparent"
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+            </svg>
+
+            <svg class="text-gray-600 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+
+        </div>
+    </div>
+</header>
+
+<main class="main-container block relative h-screen pt-14 text-lg">
+
+    <div class="scroll-container bg-gray-300">
+
+        <section class="scroll-section bg-red-300">
+            <h2 class="section-headline-lg">CSS Scroll Snap</h2>
+            <p class="mt-4 text-center">
+                This is an interactive showcase on how
+                <mark class="p-0.5 rounded font-bold whitespace-nowrap">CSS Scroll Snap</mark>
+                works!
+            </p>
+            <p class="mt-auto mb-10 px-2 text-center">
+                You may scroll down for an example and further information.
+                Pay attention on the scroll behaviour when scrolling...
+            </p>
+
+            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            </svg>
+        </section>
+
+        <section class="scroll-section bg-blue-300">
+            <span class="section-divider divider-spikes text-blue-300"></span>
+            <h2 class="section-headline-md section-headline-inverted">HTML Scaffold</h2>
+
+            <p class="mt-4">
+                Try simmering loaf flavored with salad cream, decorateed with dill. Per guest prepare one package of
+                remoulade with heated lobster for dessert. For a smashed nutty pudding, add some rum and parsley.
+            </p>
+
+            <img class="my-auto self-center h-42 w-full object-contain"
+                 src="./assets/code/code-example-0.svg"
+                 alt="CSS Code example of the HTML Scaffold"
+            >
+
+            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            </svg>
+        </section>
+
+        <section class="scroll-section bg-yellow-300">
+            <span class="section-divider divider-spikes text-yellow-300"></span>
+            <h2 class="section-headline-md section-headline-inverted">Container Element</h2>
+
+            <p class="mt-4">
+                Alter contencios ducunt ad mons.<br>
+                <br>
+                Pol, a bene historia. Sunt hippotoxotaes fallere magnum, domesticus contencioes.
+                Fluctui de rusticus spatii, magicae barcas! Calcaria de placidus nixus, visum species!
+            </p>
+
+            <img class="my-auto self-center w-full object-contain"
+                 src="./assets/code/code-example-1.svg"
+                 alt="CSS Code example of the CSS that applies on the container element"
+            >
+
+            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            </svg>
+        </section>
+
+        <section class="scroll-section bg-green-300">
+            <span class="section-divider divider-spikes text-green-300"></span>
+            <h2 class="section-headline-md section-headline-inverted">Section Element</h2>
+
+            <p class="mt-4">
+                Cur ausus trabem? Fluctuis sunt bullas de audax olla. Nobilis, clemens lunas vix contactus de flavum,
+                gratis
+                canis. <br>
+                <br>
+                Cum rumor trabem, omnes apolloniateses examinare clemens, alter parmaes. Est varius clinias, cesaris.
+            </p>
+
+            <img class="my-auto self-center w-full object-contain"
+                 src="./assets/code/code-example-2.svg"
+                 alt="CSS Code example of the CSS that applies on the section element"
+            >
+
+            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            </svg>
+        </section>
+
+        <section class="scroll-section bg-purple-300">
+            <span class="section-divider divider-spikes text-purple-300"></span>
+
+            <h2 class="section-headline-md">Features</h2>
+
+            <p class="mt-4">
+                Arrr, ye black moon- set sails for faith!
+            </p>
+
+            <ul class="mt-3 pl-8 list-decimal">
+                <li>Aye, addled beauty!</li>
+                <li>Small endurances lead to the punishment.</li>
+                <li>Amnesty, power, and fortune?</li>
+                <li>Where is the proud lad?</li>
+            </ul>
+
+            <small class="mt-auto text-center text-gray-700 font-mono">Wow, ye small landlubber- set sails for punishment!</small>
+
+            <svg class="w-8 h-8 mt-6 mb-2 self-center animate-bounce"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            </svg>
+        </section>
+
+        <section class="scroll-section mb-0 bg-pink-300">
+            <span class="section-divider divider-spikes text-pink-300"></span>
+            <h2 class="section-headline-md section-headline-inverted">Final Note</h2>
+
+            <h4 class="mt-4">Rusticus, nobilis gloss</h4>
+
+            <p class="mt-1 px-2 text-justify">
+                Karmas, masters, and simple saints will always protect them. You have to sit, and forget ascension by your
+                wrestling. Not nirvana or earth, synthesise the mind. Confucius says: the visitor is like the power.
+                Relativity facilitates when you praise with mineral. The politics is an ancient visitor. The individual has
+                death, but not everyone grasps it.
+            </p>
+
+            <h4 class="mt-3">Heu, imber!</h4>
+
+            <p class="mt-1 px-2 text-justify">
+                Klingons meet with metamorphosis! Greatly exaggerated machines, to the saucer section,
+                why does the girl reproduce?
+            </p>
+
+        </section>
+
+        <div class="relative px-2">
+            <div class="section-divider divider-skewed text-gray-300"></div>
+        </div>
+    </div>
+
+</main>
+
+
+</body>
+</html>

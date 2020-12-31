@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@responsive {
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+    }
+
+    .text-shadow-md {
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .text-shadow-lg {
+        text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .text-shadow-none {
+        text-shadow: none;
+    }
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold tracking-wide;
+    }
+
+    h1 {
+        @apply text-3xl text-shadow-lg;
+    }
+
+    h2 {
+        @apply text-2xl text-shadow-md;
+    }
+
+    h3 {
+        @apply text-xl text-shadow;
+    }
+
+    h4 {
+        @apply text-lg;
+    }
+}
+
+@layer components {
+    .scroll-container {
+        scroll-snap-type: y mandatory;
+
+        @apply absolute inset-0 pb-14 overflow-x-hidden overflow-y-scroll;
+    }
+
+    .scroll-section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+
+        @apply relative h-full px-2 py-3;
+        @apply flex flex-col;
+    }
+
+    .section-headline-lg {
+        @apply px-14;
+    }
+
+    .section-headline-lg:after {
+        content: '';
+        @apply block mt-2 w-4/5 ml-4;
+        @apply border-b-4 border-gray-900 border-dotted border-opacity-75;
+    }
+
+    .section-headline-md {
+        @apply px-14;
+    }
+
+    .section-headline-md:after {
+        content: '';
+        @apply block mt-2 w-4/5 ml-4 px-14;
+        @apply border-b-2 border-gray-900 border-dotted border-opacity-75;
+    }
+
+    .section-headline-inverted {
+        @apply text-right;
+
+    }
+
+    .section-headline-inverted:after {
+        @apply mr-4 ml-auto;
+    }
+
+    .section-divider {
+        @apply absolute bottom-full w-screen -mx-2 z-10;
+    }
+
+    .divider-spikes {
+        height: 1.75rem;
+        transform: scaleY(-1);
+        background-size: 1.75rem 100%;
+        background-image: linear-gradient(135deg, currentColor 25%, transparent 25%), linear-gradient(225deg, currentColor 25%, transparent 25%);
+        background-position: 0 0;
+    }
+
+    .divider-skewed {
+        background: currentColor;
+        @apply h-8 transform skew-y-3 translate-y-5 origin-bottom-right;
+    }
+}
+
