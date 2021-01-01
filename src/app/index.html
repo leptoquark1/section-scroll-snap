@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./compiled.css" type="text/css">
 </head>
-<body class="font-sans h-screen w-screen overflow-hidden">
+<body class="font-sans bg-black h-screen w-screen overflow-hidden">
 
-<header class="block fixed top-0 left-0 right-0 z-50">
+<svg style="display: none;">
+    <symbol id="icon-chevron-down"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+    </symbol>
+</svg>
+
+<header class="container-box fixed top-0 left-0 right-0 z-50">
     <div class="h-14">
         <div class="flex h-full w-full justify-between items-center px-3">
 
@@ -31,29 +40,24 @@
     </div>
 </header>
 
-<main class="main-container block relative h-screen pt-14 text-lg">
+<main class="container-box relative h-screen pt-14 text-lg shadow-inner">
 
-    <div class="scroll-container bg-gray-300">
+    <div class="scroll-container">
 
         <section class="scroll-section bg-red-300">
             <h2 class="section-headline-lg">CSS Scroll Snap</h2>
-            <p class="mt-4 text-center">
+            <p class="mt-4">
                 This is an interactive showcase on how
-                <mark class="p-0.5 rounded font-bold whitespace-nowrap">CSS Scroll Snap</mark>
+                <mark>CSS Scroll Snap</mark>
                 works!
             </p>
-            <p class="mt-auto mb-10 px-2 text-center">
+            <p class="mt-auto mb-10 px-2">
                 You may scroll down for an example and further information.
                 Pay attention on the scroll behaviour when scrolling...
             </p>
 
-            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-chevron-down"></use>
             </svg>
         </section>
 
@@ -66,24 +70,19 @@
                 remoulade with heated lobster for dessert. For a smashed nutty pudding, add some rum and parsley.
             </p>
 
-            <img class="my-auto self-center h-42 w-full object-contain"
+            <img class="code-example"
                  src="./assets/code/code-example-0.svg"
                  alt="CSS Code example of the HTML Scaffold"
             >
 
-            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-chevron-down"></use>
             </svg>
         </section>
 
         <section class="scroll-section bg-yellow-300">
             <span class="section-divider divider-spikes text-yellow-300"></span>
-            <h2 class="section-headline-md section-headline-inverted">Container Element</h2>
+            <h2 class="section-headline-md">Container Element</h2>
 
             <p class="mt-4">
                 Alter contencios ducunt ad mons.<br>
@@ -92,18 +91,13 @@
                 Fluctui de rusticus spatii, magicae barcas! Calcaria de placidus nixus, visum species!
             </p>
 
-            <img class="my-auto self-center w-full object-contain"
+            <img class="code-example"
                  src="./assets/code/code-example-1.svg"
                  alt="CSS Code example of the CSS that applies on the container element"
             >
 
-            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-chevron-down"></use>
             </svg>
         </section>
 
@@ -119,18 +113,13 @@
                 Cum rumor trabem, omnes apolloniateses examinare clemens, alter parmaes. Est varius clinias, cesaris.
             </p>
 
-            <img class="my-auto self-center w-full object-contain"
+            <img class="code-example"
                  src="./assets/code/code-example-2.svg"
                  alt="CSS Code example of the CSS that applies on the section element"
             >
 
-            <svg class="w-8 h-8 mt-auto mb-2 self-center animate-bounce"
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-chevron-down"></use>
             </svg>
         </section>
 
@@ -152,16 +141,12 @@
 
             <small class="mt-auto text-center text-gray-700 font-mono">Wow, ye small landlubber- set sails for punishment!</small>
 
-            <svg class="w-8 h-8 mt-6 mb-2 self-center animate-bounce"
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7"/>
+            <svg class="icon-chevron-down mt-6" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-chevron-down"></use>
             </svg>
         </section>
 
-        <section class="scroll-section mb-0 bg-pink-300">
+        <section class="scroll-section pb-8 bg-pink-300">
             <span class="section-divider divider-spikes text-pink-300"></span>
             <h2 class="section-headline-md section-headline-inverted">Final Note</h2>
 
@@ -180,11 +165,13 @@
                 Klingons meet with metamorphosis! Greatly exaggerated machines, to the saucer section,
                 why does the girl reproduce?
             </p>
-
         </section>
 
-        <div class="relative px-2">
-            <div class="section-divider divider-skewed text-gray-300"></div>
+        <div class="relative flex flex-col h-12 px-2 pb-1 bg-gradient-to-b from-pink-300 to-white">
+            <small class="text-sm self-center mt-auto transform transition-transform hover:scale-105">
+                Made with <span class="font-mono text-lg text-red-500">&#10084;</span>
+                by <a class="tracking-wide text-blue-500" href="https://twitter.com/leptoquark1">@leptoquark1</a>
+            </small>
         </div>
     </div>
 

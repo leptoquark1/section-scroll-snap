@@ -1,10 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@responsive {
-    .text-shadow {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+@layer utilities {
+    .pseudo-content {
+        display: block;
+        content: '';
     }
 
     .text-shadow-md {
@@ -13,10 +14,6 @@
 
     .text-shadow-lg {
         text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
-    }
-
-    .text-shadow-none {
-        text-shadow: none;
     }
 }
 
@@ -33,27 +30,41 @@
         @apply text-2xl text-shadow-md;
     }
 
-    h3 {
-        @apply text-xl text-shadow;
-    }
-
     h4 {
         @apply text-lg;
+    }
+
+    p {
+        @apply text-center font-serif;
+    }
+
+    mark {
+        @apply py-0.5 px-1 rounded font-semibold whitespace-nowrap;
     }
 }
 
 @layer components {
+    .container-box {
+        @apply md:max-w-2xl md:mx-auto md:border-l md:border-r md:border-gray-500;
+    }
+
+    .icon-chevron-down {
+        @apply w-8 h-8 self-center animate-bounce mt-auto mb-2;
+    }
+
     .scroll-container {
         scroll-snap-type: y mandatory;
 
-        @apply absolute inset-0 pb-14 overflow-x-hidden overflow-y-scroll;
+        @apply absolute inset-0 overflow-x-hidden overflow-y-scroll;
     }
 
     .scroll-section {
         scroll-snap-align: start;
         scroll-snap-stop: always;
 
-        @apply relative h-full px-2 py-3;
+        min-height: calc(100vh - 3rem);
+
+        @apply relative px-2 pt-3 pb-8;
         @apply flex flex-col;
     }
 
@@ -62,7 +73,7 @@
     }
 
     .section-headline-lg:after {
-        content: '';
+        @apply pseudo-content;
         @apply block mt-2 w-4/5 ml-4;
         @apply border-b-4 border-gray-900 border-dotted border-opacity-75;
     }
@@ -72,14 +83,13 @@
     }
 
     .section-headline-md:after {
-        content: '';
+        @apply pseudo-content;
         @apply block mt-2 w-4/5 ml-4 px-14;
         @apply border-b-2 border-gray-900 border-dotted border-opacity-75;
     }
 
     .section-headline-inverted {
         @apply text-right;
-
     }
 
     .section-headline-inverted:after {
@@ -98,9 +108,7 @@
         background-position: 0 0;
     }
 
-    .divider-skewed {
-        background: currentColor;
-        @apply h-8 transform skew-y-3 translate-y-5 origin-bottom-right;
+    .code-example {
+        @apply my-auto self-center w-full max-w-sm object-contain;
     }
 }
-
