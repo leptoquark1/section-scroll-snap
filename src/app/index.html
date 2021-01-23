@@ -31,11 +31,6 @@
                       d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
             </svg>
 
-            <svg class="text-gray-600 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-
         </div>
     </div>
 </header>
@@ -70,10 +65,20 @@
                 remoulade with heated lobster for dessert. For a smashed nutty pudding, add some rum and parsley.
             </p>
 
-            <img class="code-example"
-                 src="./assets/code/code-example-0.svg"
-                 alt="CSS Code example of the HTML Scaffold"
-            >
+            <div class="inline-flex w-full flex-1 mt-4 items-center justify-center">
+                <div class="vrtl-window">
+                    <pre class="language-markup"><code>
+&lt;div class=scroll-container>
+  &lt;section class=scroll-section>
+    &lt;!-- Content goes here -->
+  &lt;/section>
+  &lt;section class=scroll-section>
+    &lt;!-- Content goes here -->
+  &lt;/section>
+&lt;/div>
+                    </code></pre>
+                </div>
+            </div>
 
             <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
                 <use href="#icon-chevron-down"></use>
@@ -91,10 +96,15 @@
                 Fluctui de rusticus spatii, magicae barcas! Calcaria de placidus nixus, visum species!
             </p>
 
-            <img class="code-example"
-                 src="./assets/code/code-example-1.svg"
-                 alt="CSS Code example of the CSS that applies on the container element"
-            >
+            <div class="inline-flex w-full flex-1 mt-4 items-center justify-center">
+                <div class="vrtl-window">
+                    <pre class="language-css"><code>
+.scroll-container {
+  scroll-snap-type: y manditory;
+}
+                    </code></pre>
+                </div>
+            </div>
 
             <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
                 <use href="#icon-chevron-down"></use>
@@ -113,10 +123,16 @@
                 Cum rumor trabem, omnes apolloniateses examinare clemens, alter parmaes. Est varius clinias, cesaris.
             </p>
 
-            <img class="code-example"
-                 src="./assets/code/code-example-2.svg"
-                 alt="CSS Code example of the CSS that applies on the section element"
-            >
+            <div class="inline-flex w-full flex-1 mt-4 items-center justify-center">
+                <div class="vrtl-window">
+                    <pre class="language-css"><code>
+.scroll-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+                    </code></pre>
+                </div>
+            </div>
 
             <svg class="icon-chevron-down" xmlns="http://www.w3.org/2000/svg">
                 <use href="#icon-chevron-down"></use>
@@ -177,6 +193,7 @@
 
 </main>
 
+<script src="assets/prism.js"></script>
 
 </body>
 </html>
